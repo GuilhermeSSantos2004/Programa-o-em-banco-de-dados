@@ -111,4 +111,7 @@ Por que motivo criamos a coluna ou a tabela?
 É basicamente uma forma de documentar o nosso projeto para ser fácil dentro de alguns meses ou
 anos fazer a manutenção dessa tabela e manter a gestão do conhecimento.
 
+### Modelagem
+![Modelagem do Banco de Dados](https://github.com/GuilhermeSSantos2004/Programa-o-em-banco-de-dados/assets/107642647/af59573c-d302-4a6c-a029-a4cb8ae6e842)
+
 
