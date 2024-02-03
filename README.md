@@ -130,41 +130,41 @@ Os comandos SQL são categorizados em várias linguagens específicas, cada uma 
 
 Os comandos DDL são usados para definir a estrutura do banco de dados:
 
-#### CREATE: cria objetos de banco de dados, como tabelas, índices, visões e procedimentos
+- CREATE: cria objetos de banco de dados, como tabelas, índices, visões e procedimentos
 armazenados.
 
-#### ALTER: modifica a estrutura de objetos de banco de dados existentes, como adicionar ou
+- ALTER: modifica a estrutura de objetos de banco de dados existentes, como adicionar ou
 remover colunas de tabelas.
 
-#### DROP: exclui objetos de banco de dados, como tabelas, índices ou visões.
+- DROP: exclui objetos de banco de dados, como tabelas, índices ou visões.
 
-#### TRUNCATE: Remove todos os registros de uma tabela, mas mantém sua estrutura.
+- TRUNCATE: Remove todos os registros de uma tabela, mas mantém sua estrutura.
 
 ### Os comandos DML são usados para manipular os dados:
 
-#### INSERT: adiciona novos registros a uma tabela.
+- INSERT: adiciona novos registros a uma tabela.
 
-#### UPDATE: modifica registros existentes em uma tabela.
+- UPDATE: modifica registros existentes em uma tabela.
 
-#### DELETE: remove registros de uma tabela.
+- DELETE: remove registros de uma tabela.
 
-### Os comandos DQL são usados para consultas:
+- Os comandos DQL são usados para consultas:
 
 ##### SELECT: recupera dados de uma ou mais tabelas do banco de dados. É o comando principal para consultas.
 
 Os comandos DCL controlam permissões de acesso e os comandos:
 
-#### GRANT: Concede permissões a usuários ou funções para acessar objetos de banco de dados.
+- GRANT: Concede permissões a usuários ou funções para acessar objetos de banco de dados.
 
-#### REVOKE: Remove permissões previamente concedidas a usuários.
+- REVOKE: Remove permissões previamente concedidas a usuários.
 
 ### Os comandos TCL gerenciam transações:
 
-#### COMMIT: Confirma uma transação, tornando as alterações permanentes no banco de dados.
+- COMMIT: Confirma uma transação, tornando as alterações permanentes no banco de dados.
 
-#### ROLLBACK: Desfaz uma transação e restaura o banco de dados ao estado anterior.
+- ROLLBACK: Desfaz uma transação e restaura o banco de dados ao estado anterior.
 
-#### SAVEPOINT: Define um ponto de salvamento em uma transação, permitindo o rollback parcial.
+- SAVEPOINT: Define um ponto de salvamento em uma transação, permitindo o rollback parcial.
 
-#### SET TRANSACTION: Define características de transação, como isolamento e nível de
+- SET TRANSACTION: Define características de transação, como isolamento e nível de
 isolamento.
