@@ -115,3 +115,56 @@ anos fazer a manutenção dessa tabela e manter a gestão do conhecimento.
 ![Modelagem do Banco de Dados](https://github.com/GuilhermeSSantos2004/Programa-o-em-banco-de-dados/assets/107642647/af59573c-d302-4a6c-a029-a4cb8ae6e842)
 
 
+## COMANDOS SQL
+
+De forma geral, os comandos SQL são instruções ou consultas usadas para
+interagir com um banco de dados relacional.
+
+Essas instruções SQL permitem que as pessoas ou aplicativos realizem várias
+operações, como recuperação, inserção, atualização e exclusão de dados em
+tabelas de banco de dados.
+
+Os comandos SQL são categorizados em várias linguagens específicas, cada uma com seu propósito e função. Análise a seguir algumas possibilidades.
+
+## COMANDOS DDL(DATA DEFINITION LANGUAGE)
+
+Os comandos DDL são usados para definir a estrutura do banco de dados:
+
+#### CREATE: cria objetos de banco de dados, como tabelas, índices, visões e procedimentos
+armazenados.
+
+#### ALTER: modifica a estrutura de objetos de banco de dados existentes, como adicionar ou
+remover colunas de tabelas.
+
+#### DROP: exclui objetos de banco de dados, como tabelas, índices ou visões.
+
+#### TRUNCATE: Remove todos os registros de uma tabela, mas mantém sua estrutura.
+
+### Os comandos DML são usados para manipular os dados:
+
+#### INSERT: adiciona novos registros a uma tabela.
+
+#### UPDATE: modifica registros existentes em uma tabela.
+
+#### DELETE: remove registros de uma tabela.
+
+### Os comandos DQL são usados para consultas:
+
+##### SELECT: recupera dados de uma ou mais tabelas do banco de dados. É o comando principal para consultas.
+
+Os comandos DCL controlam permissões de acesso e os comandos:
+
+#### GRANT: Concede permissões a usuários ou funções para acessar objetos de banco de dados.
+
+#### REVOKE: Remove permissões previamente concedidas a usuários.
+
+### Os comandos TCL gerenciam transações:
+
+#### COMMIT: Confirma uma transação, tornando as alterações permanentes no banco de dados.
+
+#### ROLLBACK: Desfaz uma transação e restaura o banco de dados ao estado anterior.
+
+#### SAVEPOINT: Define um ponto de salvamento em uma transação, permitindo o rollback parcial.
+
+#### SET TRANSACTION: Define características de transação, como isolamento e nível de
+isolamento.
