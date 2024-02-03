@@ -126,6 +126,8 @@ tabelas de banco de dados.
 
 Os comandos SQL são categorizados em várias linguagens específicas, cada uma com seu propósito e função. Análise a seguir algumas possibilidades.
 
+![image](https://github.com/GuilhermeSSantos2004/Programa-o-em-banco-de-dados/assets/107642647/90f3f270-cab5-45fc-8399-590618ae295f)
+
 ## COMANDOS DDL(DATA DEFINITION LANGUAGE)
 
 Os comandos DDL são usados para definir a estrutura do banco de dados:
