@@ -170,3 +170,124 @@ Os comandos DCL controlam permissões de acesso e os comandos:
 
 - SET TRANSACTION: Define características de transação, como isolamento e nível de
 isolamento.
+
+
+### Comandos SQL 
+
+##### Cláusula LIMIT
+
+- A cláusula LIMIT é amplamente utilizada em SGBDs como MySQL, PostgreSQL e SQLite. Sua principal função é restringir o número de registros retornados por uma consulta.
+
+###### Sintaxe Básica:
+
+- SELECT colunas FROM tabela
+LIMIT número;
+
+- Enquanto LIMIT é mais comum em ambientes como MySQL e PostgreSQL, TOP é específico para o ambiente Microsoft. Além disso, a cláusula LIMIT pode ser acompanhada por #### OFFSET para pular um número específico de linhas, uma funcionalidade que é especialmente útil para implementar paginação em aplicações web.
+
+- Por exemplo, para pular os primeiros 10 registros e retornar os seguintes 10, você usaria:
+
+SELECT * FROM clientes
+LIMIT 10 OFFSET 10;
+
+#### Cláusula NULL
+
+Para trazer as colunas vazias, ou NULL, em SQL, utilizamos o comando ISNULL: uma expressão específica do SQL para trazer justamente esses campos NULL de cada coluna.
+
+- SELECT * FROM HistoricoEmprego
+WHERE datatermino ISNULL
+ORDER BY salario DESC
+LIMIT 5;
+
+#### Cláusula NOTNULL
+
+Se quiséssemos, por exemplo, trazer apenas as pessoas colaboradoras que não estão empregadas no momento, ou seja, que têm uma data em DataTermino, neste caso, trocaríamos o comando ISNULL por NOTNULL.
+
+- SELECT * FROM HistoricoEmprego
+WHERE datatermino NOTNULL
+ORDER BY salario DESC
+LIMIT 5;
+
+#### Utilizando o comando LIKE
+
+- O comando LIKE é utilizado na linguagem SQL para realizar consultas que envolvem a busca de padrões em uma coluna de texto. Ele permite filtrar os resultados de uma consulta de acordo com um padrão específico. O símbolo de porcentagem (%) é utilizado para representar qualquer quantidade de caracteres desconhecidos. Por exemplo, o comando "SELECT * FROM tabela WHERE coluna LIKE 'padrão%'" irá retornar todas as linhas da tabela em que a coluna começa com o padrão especificado.
+
+- SELECT * FROM func where hint like 'A real%';
+
+##### Filtrando por palavras no meio de um nome
+
+- SELECT * FROM Treinamento
+WHERE curso LIKE '%realizar%';
+
+#### Operadores lógicos
+
+Os operadores lógicos servem para nos ajudar a trazer mais especificações, isto é, mais condições para as nossas consultas simultaneamente. No caso, o operador AND restringe nossas consultas.
+
+Esse operador faz com que seja retornado apenas o registro verdadeiro para ambas as condições que definimos. Cada AND que adicionamos, adicionamos uma condição a mais que determinado registro precisa atender para que seja trazido na consulta.
+
+
+SELECT * FROM HistoricoEmprego
+WHERE cargo = 'Professor' AND
+datatermino NOT NULL;
+
+
+#### Utilizando o operador O
+
+- o operador "OR" é utilizado para adicionar condições mais amplas a uma consulta. Ele retorna registros que atendam a pelo menos uma das condições especificadas. Por exemplo, em uma consulta na tabela "HistoricoEmprego" em busca de colaboradores com os cargos de "Oftalmologista" ou "Dermatologista", o operador "OR" é utilizado para retornar os colaboradores que atendam a uma das condições especificadas.
+
+- SELECT * FROM HistoricoEmprego
+WHERE cargo = 'Oftalmologista' OR
+cargo = 'Dermatologista';
+
+#### Utilizando o operador IN
+
+- O IN vai fazer com que coloquemos entre parênteses todos os campos que queremos trazer de uma só vez, sem precisar repetir o operador (OR) diversas vezes. 
+
+SELECT * FROM HistoricoEmprego
+WHERE cargo IN ('Oftalmologista', 'Dermatologista', 'Professor');
+
+#### Utilizando o operador NOT
+
+- Poderíamos seguir o mesmo caminho se quiséssemos fazer uma consulta excluindo alguns registros. Por exemplo: se quiséssemos puxar todas as pessoas cadastradas com suas respectivas profissões, menos oftalmologista, dermatologista e professor.
+
+- Como fazemos para excluir algum registro específico? Nesse caso, em vez de usar o operador IN, escrevemos antes do IN, o operador lógico NOT. Dessa forma, teremos o comando NOT IN.
+
+- SELECT * FROM HistoricoEmprego
+WHERE cargo NOT IN ('Oftalmologista', 'Dermatologista', 'Professor');
+
+
+#### Utilizando funções de agregação
+
+- Existem algumas funções específicas no SQL que conseguem trazer exatamente esse resultado: as funções de agregação. Elas agregam números (principalmente informações numéricas), e conseguem trazer o total de valores de vendas ou qualquer outro valor que trabalhe com números. Com elas, conseguimos trazer o total, o valor mínimo e o valor máximo, correlacionando com outras colunas da tabela.
+
+#### função MAX()
+
+- Em seguida, adicionaremos a função MAX() para saber o mês em que houve o maior faturamento na história da empresa. Entre seus parênteses, vamos colocar a coluna que queremos trazer. No caso, queremos saber o faturamento bruto, então, vamos colocar faturamento_bruto.
+
+- SELECT mes, MAX(faturamento_bruto) FROM faturamento;
+
+- Em seguida, temos que saber o faturamento mínimo, o mês que ela menos trouxe faturamento na história da empresa.
+
+#### função MIN()
+
+Para isso, manteremos a consulta SELECT mes e, ao invés de MAX(), vamos usar a função de agregação MIN(). Os nomes delas são bem intuitivos, tornando bem simples de entender qual função cada uma exerce.
+
+#### função SUM()
+
+A função SUM é uma função de agregação no SQL que permite somar os valores de uma coluna numérica em uma tabela. Ela é utilizada para obter a soma total de um conjunto de valores. No contexto do vídeo, a função SUM foi utilizada para somar o número de novos clientes do último ano na tabela de faturamento.
+
+- SELECT SUM(numero_novos_clientes) AS 'Novos clientes 2023' FROM faturamento
+
+
+#### Gerando as médias com AVG()
+
+- Ela serve para ver a média — AVG vem de Average (média em inglês).
+
+- SELECT AVG(despesas) FROM faturamento;
+
+#### Gerando contagens de linhas com COUNT()
+
+- Também temos a função de agregação COUNT(), que vai contar um número de linhas específicas que respondem a um determinado critério ou condição que colocarmos na nossa consulta. Ela será ótima para a próxima demanda da Fokus, já que ela deseja saber a quantidade exata de pessoas colaboradoras desempregadas.
+
+- SELECT COUNT(*) FROM HistoricoEmprego
+WHERE datatermino NOT NULL;
