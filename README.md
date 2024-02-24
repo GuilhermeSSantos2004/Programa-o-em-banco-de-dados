@@ -292,7 +292,7 @@ A função SUM é uma função de agregação no SQL que permite somar os valore
 - SELECT COUNT(*) FROM HistoricoEmprego
 WHERE datatermino NOT NULL;
 
-
+____________________________________________________________________________________________________________________________________
 
 #### DDL - Data Definition Language - Linguagem de Definição de Dados.
 - São comandos DDL : CREATE, ALTER e DROP
