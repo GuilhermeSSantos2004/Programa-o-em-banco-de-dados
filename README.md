@@ -292,6 +292,34 @@ A função SUM é uma função de agregação no SQL que permite somar os valore
 - SELECT COUNT(*) FROM HistoricoEmprego
 WHERE datatermino NOT NULL;
 
+#### Mostrando tipos diferentes com o GROUP BY
+
+- A cláusula GROUP BY agrupa linhas que têm os mesmos valores na coluna que especificamos.
+
+- SELECT parentesco FROM Dependentes
+GROUP BY parentesco;
+
+- SELECT parentesco, COUNT(*) FROM Dependentes
+GROUP BY parentesco;
+
+- SELECT instituicao, COUNT(curso)
+FROM Treinamento
+GROUP BY instituicao
+WHERE COUNT(curso) > 2;
+
+# Condicionando dados agrupados com HAVING
+
+A cláusula HAVING é utilizada em consultas SQL para condicionar dados agrupados após a aplicação da cláusula GROUP BY. Ela permite filtrar os resultados de acordo com uma condição específica, que pode ser baseada em funções de agregação, como COUNT, SUM, AVG, entre outras. Dessa forma, é possível selecionar apenas os grupos que atendem a determinada condição.
+
+- SELECT instituicao, COUNT(curso)
+FROM Treinamento
+GROUP BY instituicao
+HAVING COUNT(curso) > 2;
+
+#### Verificando os CPFs com a função LENGTH
+
+
+
 ____________________________________________________________________________________________________________________________________
 
 #### DDL - Data Definition Language - Linguagem de Definição de Dados.
