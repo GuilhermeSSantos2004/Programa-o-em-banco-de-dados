@@ -291,3 +291,24 @@ A função SUM é uma função de agregação no SQL que permite somar os valore
 
 - SELECT COUNT(*) FROM HistoricoEmprego
 WHERE datatermino NOT NULL;
+
+
+
+#### DDL - Data Definition Language - Linguagem de Definição de Dados.
+- São comandos DDL : CREATE, ALTER e DROP
+
+#### DML - Data Manipulation Language - Linguagem de Manipulação de Dados.
+
+São os comandos que interagem com os dados dentro das tabelas.
+- São comandos DML : INSERT, DELETE e UPDATE
+
+#### DQL - Data Query Language - Linguagem de Consulta de dados.
+São os comandos de consulta.
+
+- São comandos DQL : SELECT (é o comando de consulta)
+Aqui cabe um parenteses. Em alguns livros o SELECT fica na DML em outros tem esse grupo próprio.
+
+#### DTL - Data Transaction Language - Linguagem de Transação de Dados.
+São os comandos para controle de transação.
+
+- São comandos DTL : BEGIN TRANSACTION, COMMIT E ROLLBACK
