@@ -1,6 +1,9 @@
 # Programação-em-banco-de-dados
 
-### Modelagem de Dados
+### Modelagem de Dados 
+
+Modelagem de banco de dados:
+entidades, relacionamentos e atributos
 
 ![modelo](https://github.com/GuilhermeSSantos2004/Programa-o-em-banco-de-dados/assets/107642647/bf0eda09-50a2-4934-8f65-0d40498fb2ef)
 
