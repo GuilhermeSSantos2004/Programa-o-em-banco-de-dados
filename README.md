@@ -343,3 +343,7 @@ Aqui cabe um parenteses. Em alguns livros o SELECT fica na DML em outros tem ess
 São os comandos para controle de transação.
 
 - São comandos DTL : BEGIN TRANSACTION, COMMIT E ROLLBACK
+
+
+
+![image](https://github.com/GuilhermeSSantos2004/Programa-o-em-banco-de-dados/assets/107642647/c0808af8-33be-44c7-88f9-88bc55b0c0bc)
