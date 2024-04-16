@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="logicalModelerOrecle" id="C147DB4C-6859-0FAA-C0CA-C7CE80A6DE87" version="3.5">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2024-04-16 00:33:34 UTC</createdTime>
+<ownerDesignName>logicalModelerOrecle</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C147DB4C-6859-0FAA-C0CA-C7CE80A6DE87</designId>
+</OSDM_Design>
